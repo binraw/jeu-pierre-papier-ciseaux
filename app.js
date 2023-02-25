@@ -2,15 +2,22 @@ const computerChoiceDisplay = document.getElementById("computer-choice");
 const userChoiceDisplay = document.getElementById("user-choice");
 const resultDisplay = document.getElementById("result");
 const possibleChoices = document.querySelectorAll("button");
+const campComputer = document.querySelector(".computer-camp");
+const campUser = document.querySelector(".user-camp");
+const backResult = document.querySelector(".selection-camp");
 let userChoice;
 let computerChoice;
 let resultat;
+
 possibleChoices.forEach((possibleChoice) =>
 	possibleChoice.addEventListener("click", (e) => {
 		userChoice = e.target.id;
 		userChoiceDisplay.innerHTML = userChoice;
 		generateComputerChoice();
+		changeBackMachine();
+		changeBackHumain();
 		getResult();
+		changeBackResult();
 	})
 );
 
@@ -54,4 +61,39 @@ function getResult() {
 		resultat = "Tu Gagnes";
 	}
 	resultDisplay.innerHTML = resultat;
+}
+
+function changeBackResult() {
+	if (resultat == "Tu Gagnes") {
+		backResult.style.backgroundImage = "url(images/feux-artifice.jpg)";
+		console.log("changement back");
+	} else if (resultat == "C'est une egalité") {
+		backResult.style.backgroundImage = "url(images/terre-image-neutre.png)";
+	} else {
+		backResult.style.backgroundImage = "url(images/explosion-terre.jpg)";
+		console.log("pas de changement");
+	}
+}
+
+function changeBackHumain() {
+	if (userChoice == "Ciseau") {
+		campUser.style.backgroundImage = "url(images/ciseaux.jpg)";
+	}
+	if (userChoice == "Pierre") {
+		campUser.style.backgroundImage = "url(images/pierre-steatite.jpg)";
+	}
+	if (userChoice == "Papier") {
+		campUser.style.backgroundImage = "url(images/feuille.jfif)";
+	}
+}
+function changeBackMachine() {
+	if (computerChoice == "Ciseau") {
+		campComputer.style.backgroundImage = "url(images/ciseaux.jpg)";
+	}
+	if (computerChoice == "Pierre") {
+		campComputer.style.backgroundImage = "url(images/pierre-steatite.jpg)";
+	}
+	if (computerChoice == "Papier") {
+		campComputer.style.backgroundImage = "url(images/feuille.jfif)";
+	}
 }

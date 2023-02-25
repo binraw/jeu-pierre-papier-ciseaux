@@ -9,20 +9,25 @@
 }
 .computer-camp {
 	width: 50%;
-	height: 50vh;
-	background-color: beige;
+	height: 55vh;
+	background-image: url(images/robot-du-futur.jpg);
+	background-size: cover;
 }
 
 .user-camp {
 	width: 50%;
-	height: 50vh;
-	background-color: blueviolet;
+	height: 55vh;
+	background-image: url(images/main-neutre.jpg);
+	background-size: cover;
+	color: white;
 }
 
 .selection-camp {
 	width: 100%;
-	height: 50vh;
-	background-color: aquamarine;
+	height: 45vh;
+	background-image: url(images/terre-image-neutre.png);
+	background-size: cover;
+	color: white;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
