@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.camp {
+	display: flex;
+	flex-direction: row;
+}
+.computer-camp {
+	width: 50%;
+	height: 50vh;
+	background-color: beige;
+}
+
+.user-camp {
+	width: 50%;
+	height: 50vh;
+	background-color: blueviolet;
+}
+
+.selection-camp {
+	width: 100%;
+	height: 50vh;
+	background-color: aquamarine;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.annonce {
+	width: 100%;
+}
+
+button {
+	width: 15vw;
+	height: 7vh;
+	border-radius: 20px;
+}
+.selection {
+	display: flex;
+	gap: 3rem;
+}
